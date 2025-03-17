@@ -16,9 +16,8 @@
    :output-dir "public/js"
    :asset-path "/js"
    :release {:compiler-options {:optimizations :advanced}}
+   :infer-externs true
    :install-deps true
    :npm-deps {:three "0.158.0"
               :cannon-es "0.20.0"}
-   :modules
-   {:main ; becomes public/js/main.js
-    {:init-fn dragonfly.main/animate}}}}}
+   :modules {:main {:init-fn dragonfly.main/init}}}}}
